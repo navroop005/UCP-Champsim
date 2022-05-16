@@ -3,9 +3,9 @@
   <p> ChampSim is a trace-based simulator for a microarchitecture study. You can sign up to the public mailing list by sending an empty mail to champsim+subscribe@googlegroups.com. Traces for the 3rd Data Prefetching Championship (DPC-3) can be found from here (https://dpc3.compas.cs.stonybrook.edu/?SW_IS). A set of traces used for the 2nd Cache Replacement Championship (CRC-2) can be found from this link. (http://bit.ly/2t2nkUj) <p>
 </p>
 
-# Clone ChampSim repository
+# Clone this repository
 ```
-git clone https://github.com/ChampSim/ChampSim.git
+git clone https://github.com/navroop005/UCP-Champsim.git
 ```
 
 # Compile
@@ -45,13 +45,13 @@ ${OPTION}: extra option for "-low_bandwidth" (src/main.cc)
 ```
 Simulation results will be stored under "results_${N_SIM}M" as a form of "${TRACE}-${BINARY}-${OPTION}.txt".<br> 
 
-* Multi-core simulation: Run simulation with `run_4core.sh` script. <br>
+* Multi-core simulation: Run simulation with `run_ncore.sh` script. <br>
 ```
-Usage: ./run_4core.sh [BINARY] [N_WARM] [N_SIM] [N_MIX] [TRACE0] [TRACE1] [TRACE2] [TRACE3] [OPTION]
-$ ./run_4core.sh bimodal-no-no-no-lru-4core 1 10 0 400.perlbench-41B.champsimtrace.xz \\
+Usage: ./run_ncore.sh [NUM_CORES] [BINARY] [N_WARM] [N_SIM] [N_MIX] [TRACE0] [TRACE1] [TRACE2] [TRACE3]...
+$ ./run_ncore.sh 4 bimodal-no-no-no-lru-4core 1 10 0 400.perlbench-41B.champsimtrace.xz \\
   401.bzip2-38B.champsimtrace.xz 403.gcc-17B.champsimtrace.xz 410.bwaves-945B.champsimtrace.xz
 ```
-Note that we need to specify multiple trace files for `run_4core.sh`. `N_MIX` is used to represent a unique ID for mixed multi-programmed workloads. 
+Note that we need to specify multiple trace files for `run_ncore.sh`. `N_MIX` is used to represent a unique ID for mixed multi-programmed workloads. 
 
 
 # Add your own branch predictor, data prefetchers, and replacement policy
@@ -135,4 +135,6 @@ but they generally compress down to less than a byte per instruction using xz co
 ChampSim measures the IPC (Instruction Per Cycle) value as a performance metric. <br>
 There are some other useful metrics printed out at the end of simulation. <br>
 
-Good luck and be a champion! <br>
+# Original Champsim Repository
+
+https://github.com/ChampSim/ChampSim.git
