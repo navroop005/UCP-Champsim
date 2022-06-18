@@ -137,10 +137,10 @@ There are some other useful metrics printed out at the end of simulation. <br>
 
 # Contributors
 
-Amit Kumar
-Ashish Alok
-Kartikay Singh
-Navroop Singh
+Amit Kumar <br>
+Ashish Alok <br>
+Kartikay Singh <br>
+Navroop Singh <br>
 Nishant Verma
 
 # Original Champsim Repository
